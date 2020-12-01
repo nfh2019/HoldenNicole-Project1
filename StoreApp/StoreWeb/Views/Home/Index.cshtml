@@ -1,0 +1,84 @@
+﻿@model StoreWeb2.Models.Customer
+@{
+    ViewData["Title"] = "Home Page";
+}
+<!DOCTYPE html>
+<html>
+<body>
+    <div class="text-center">
+        <h1 class="display-4">Welcome To Sports Authenticated</h1>
+        <p>Check out what we have in our stores today!</p>
+        <p>You never know what you will be able to find.</p>
+        <p>How would you like to view Sports Authenticated Today?</p>
+    </div>
+
+    <section id="sign-in">
+        <div class="row">
+            <div class="column">
+                <fieldset>
+                    @using (Html.BeginForm("Create", "Customers", FormMethod.Post))
+                    {
+                        <legend>Sign Up</legend>
+                        <p>
+                            <label placeholder="Desired User Name">User Name: </label>
+                            @Html.EditorFor(model => model.Username)
+                            @Html.ValidationMessageFor(model => model.Username)
+                        </p>
+                        <p>
+                            <label placeholder="Email">Email: </label>
+                            @Html.EditorFor(m => m.Email)
+                            @Html.ValidationMessageFor(model => model.Email)
+                        </p>
+                        <p>
+                            <input type="submit" value="Register" class="btn btn-primary" onclick="location.href='@Url.Action(" />
+
+                        </p>
+                    }
+                </fieldset>
+            </div>
+            <div class="column">
+                <fieldset>
+                    @using (Html.BeginForm("SignInCustomer", "Customers", FormMethod.Post))
+                    {
+                        <legend>Sign In</legend>
+                        <p>
+                            <label placeholder="User Name">User Name: </label>
+                            @Html.EditorFor(model => model.Username)
+                            @Html.ValidationMessageFor(model => model.Username)
+                        </p>
+                        <p>
+                            <label placeholder="Email">Email: </label>
+                            @Html.EditorFor(m => m.Email)
+                            @Html.ValidationMessageFor(model => model.Email)
+                        </p>
+                        <p>
+                            <input type="submit" value="Log In" class="btn btn-primary" />
+                        </p>
+                    }
+                </fieldset>
+            </div>
+            <div class="column">
+                <fieldset>
+                    @using (Html.BeginForm("SignInManager", "Manager", FormMethod.Post))
+                    {
+                        <legend>Manager Sign In</legend>
+                        <p>
+                            <label placeholder="User Name">User Name: </label>
+                            @Html.EditorFor(model => model.Username)
+                            @Html.ValidationMessageFor(model => model.Username)
+                        </p>
+                        <p>
+                            <label placeholder="Email">Email: </label>
+                            @Html.EditorFor(m => m.Email)
+                            @Html.ValidationMessageFor(model => model.Email)
+                        </p>
+                        <p>
+                            <input type="submit" value="Log In" class="btn btn-primary" />
+                        </p>
+                    }
+                </fieldset>
+            </div>
+        </div>
+    </section>    
+</body>
+</html>
