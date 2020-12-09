@@ -18,6 +18,6 @@ C# Programming, ASP.NET MVC, ADO.NET Entity Framework, Testing Process / SDLC, H
 This application currently uses Entity Framework Core to connect to a PostgreSQL database, and ASP.NET Core API to create a RESTful API.
 There will be a front end created with ASP.NET MVC, HTML, CSS, BootstrapJS, and Javascript.
 
-### Contributors and Licenses
+### Contributors
 Sole contributor: Nicole Holden
 Assistance from: Shalei Kumar and Brian Foley
